@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Coin from './components/Coin';
 import axios from 'axios';
 import Iframe from 'react-iframe';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Main from './components/Main';
 import Login from './components/Login';
 import './App.css';
@@ -19,7 +19,7 @@ function App() {
   return(
     <div className="App">
       
-      <Router>
+      <HashRouter>
       <StytchProvider stytch={stytchClient}>
         <Routes>
           <Route path="/" element={<Main/>}/>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword/>}/>
         </Routes>
         </StytchProvider>
-      </Router>
+      </HashRouter>
     </div>
   )
 }
