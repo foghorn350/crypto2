@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		document.that = 100;
+		const those = 111;
+
+		document.addEventListener('click', function (event)
+{	
+    let elem = event.target;
+    let jsonObject =
+    {
+        Key: 'click',
+        Value: elem.name || elem.id || elem.tagName || "Unknown"
+    };
+    window.chrome.webview.postMessage(elem.name || elem.id || elem.tagName || "Unkown");
+});
+	</script>
+<head>
+	<h2 id="Title text" style="font-size:24px; color:#f60; font-family:helvetica, arial,sans-serif; font-weight:600">Provide Feedback</h2>
+	<script src="https://kit.fontawesome.com/3d14c46c3e.js" crossorigin="anonymous"></script> 
+	<i class="fa-solid fa-pen fa-bounce" style="color: #ff6f45;"></i>
+
+ 
+
+<i class="fa-light fa-draw-polygon fa-fade"></i>
+
+ 
+
+<i class="fa-duotone fa-compass-drafting" style="--fa-primary-color: #ff7c31; --fa-secondary-color: #b50001; --fa-secondary-opacity: 1;"></i>
+
+ 
+
+<i class="fa-light fa-compass-drafting"></i>
+<style>
+	.button {
+	  background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+	
+	.button1 {
+	  background-color: white; 
+	  color: black; 
+	  border: 2px solid #4CAF50;
+	}
+	
+	.button2 {
+	  background-color: white; 
+	  color: black; 
+	  border: 2px solid #008CBA;
+	}
+	
+	.button3 {
+	  background-color: white; 
+	  color: black; 
+	  border: 2px solid #f44336;
+	}
+	
+	.button4 {
+	  background-color: white;
+	  color: black;
+	  border: 2px solid #e7e7e7;
+	}
+	
+	.button5 {
+	  background-color: white;
+	  color: black;
+	  border: 2px solid #555555;
+	}
+</style>
+	</head>
+	<body>
+	
+	<p> </p>
+	
+	<button id="Green Button" class="button button1">Green</button>
+	<button id="Blue Button" class="button button2">Blue</button>
+	<button id="Red Button" class="button button3">Red</button>
+	<button id="Gray Button" class="button button4">Gray</button>
+	<button id="Black Button" class="button button5">Black</button>
+	
+	
+
+</body>
+</html>
